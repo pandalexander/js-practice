@@ -1,2 +1,100 @@
+const testArray = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  "apple",
+  "banana",
+  "cherry",
+  "date",
+  "elderberry",
+  "fig",
+  "grape",
+  { name: "John", age: 30 },
+  { name: "Jane", age: 25 },
+  { name: "Bob", age: 40 },
+  true,
+  false,
+  null,
+  undefined,
+  [1, 2, 3],
+  [4, 5, 6],
+  "aardvark",
+  "butterfly",
+  "cat",
+  "dog",
+  "elephant",
+  11,
+  13,
+  17,
+  19,
+  23,
+  29,
+  "hello",
+  "world",
+  "javascript",
+  "programming",
+  "OpenAI",
+  { x: 1, y: 2 },
+  { x: 1, y: 2, z: 3 },
+  { a: true, b: false },
+  100,
+  200,
+  300,
+  400,
+  500,
+];
+
 // 1. Filter out even numbers
-console.log("filter");
+
+function filterEven(arr) {
+  let filteredArr = arr.filter(
+    (item) => item % 2 === 0 && typeof item === "number"
+  );
+  return filteredArr;
+}
+
+// console.log(filterEven(testArray));
+
+// 2. Filter strings longer than 5 characters
+
+function filterLongString(arr) {
+  let stringArray = arr.filter((item) => typeof item === "string");
+  let filteredString = stringArray.filter((item) => item.length > 5);
+  return filteredString;
+}
+
+// console.log(filterLongString(testArray));
+
+// 3. Filter objects with a specific property value
+// prop value = "age" "30"
+
+function filterProperty(arr, prop, val) {
+  let typeFilter = arr.filter(
+    (item) => typeof item === "object" && item !== null
+  );
+  let filtered = typeFilter.filter((item) => item.age === 30);
+  return filtered;
+}
+
+console.log(filterProperty(testArray));
+
+// 4. Filter prime numbers
+
+// 5. Filter unique values
+
+// 6. Filter strings that start with a vowel
+
+// 7. Filter numbers within a range
+
+// 8. Filter objects with all truthy values
+
+// 9. Filter elements that appear more than once
+
+// 10. Filter strings containing a specific substring
