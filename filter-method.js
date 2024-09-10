@@ -107,9 +107,33 @@ function primeFunction(arr) {
   return primeFilter;
 }
 
-console.log(primeFunction(testArray));
+// console.log(primeFunction(testArray));
 
 // 5. Filter unique values
+
+let uniqueTestArr = [
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  "banana",
+  4,
+  5,
+  6,
+  6,
+  "apple",
+  "apple",
+  null,
+];
+
+function filterUnique(arr) {
+  let filteredArr = arr.filter((item, index) => arr.indexOf(item) === index);
+  return filteredArr;
+}
+
+console.log(filterUnique(uniqueTestArr));
 
 // 6. Filter strings that start with a vowel
 
