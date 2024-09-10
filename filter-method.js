@@ -83,9 +83,31 @@ function filterProperty(arr, prop, val) {
   return filtered;
 }
 
-console.log(filterProperty(testArray));
+// console.log(filterProperty(testArray));
 
 // 4. Filter prime numbers
+
+function primeFunction(arr) {
+  let primeFilter = arr.filter((item) => {
+    if (typeof item !== "number") {
+      return false;
+    }
+
+    if (item < 2) {
+      return false;
+    }
+
+    for (let i = 2; i < Math.sqrt(item); i++) {
+      if (item % i === 0) {
+        return false;
+      }
+      return true;
+    }
+  });
+  return primeFilter;
+}
+
+console.log(primeFunction(testArray));
 
 // 5. Filter unique values
 
