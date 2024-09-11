@@ -44,7 +44,7 @@ let productOfNums = nums.reduce((accumulator, item) => {
   return accumulator * item;
 });
 
-console.log(productOfNums);
+// console.log(productOfNums);
 
 // ---
 
@@ -54,6 +54,17 @@ console.log(productOfNums);
 
 // **Question:**
 // Use `.reduce()` to find the longest word in the `strings` array.
+
+const strings = ["apple", "banana", "grapefruit", "pear"];
+
+let longestString = strings.reduce((accumulator, item) => {
+  if (item.length > accumulator.length) {
+    accumulator = item;
+  }
+  return accumulator;
+});
+
+console.log(longestString);
 
 // ---
 
