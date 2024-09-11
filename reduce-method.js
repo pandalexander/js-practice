@@ -5,6 +5,13 @@
 // **Question:**
 // Use `.reduce()` to find the sum of all numbers in the `numbers` array.
 
+const numbers = [10, 20, 30, 40];
+
+let reducedNumbers = numbers.reduce((accumulator, item) => {
+  return (accumulator += item);
+});
+
+console.log(reducedNumbers);
 // ---
 
 // ### 2. Concatenate Strings
