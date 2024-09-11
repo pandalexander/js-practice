@@ -8,10 +8,10 @@
 const numbers = [10, 20, 30, 40];
 
 let reducedNumbers = numbers.reduce((accumulator, item) => {
-  return (accumulator += item);
+  return accumulator + item;
 });
 
-console.log(reducedNumbers);
+// console.log(reducedNumbers);
 // ---
 
 // ### 2. Concatenate Strings
@@ -20,6 +20,14 @@ console.log(reducedNumbers);
 
 // **Question:**
 // Use `.reduce()` to concatenate all strings in the `words` array into a single sentence with spaces between each word.
+
+const words = ["Javascript", "is", "fun"];
+
+let fullSentence = words.reduce((accumulator, word) => {
+  return accumulator + " " + word;
+});
+
+// console.log(fullSentence);
 
 // ---
 
