@@ -64,7 +64,7 @@ let longestString = strings.reduce((accumulator, item) => {
   return accumulator;
 });
 
-console.log(longestString);
+// console.log(longestString);
 
 // ---
 
@@ -74,3 +74,14 @@ console.log(longestString);
 
 // **Question:**
 // Use `.reduce()` to count how many times the word 'apple' occurs in the `items` array.
+
+const items = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+let howManyTimes = items.reduce((accumulator, item) => {
+  if (item === "apple") {
+    accumulator += 1;
+  }
+  return accumulator;
+}, 0);
+
+console.log(howManyTimes);
