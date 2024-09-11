@@ -38,6 +38,14 @@ let fullSentence = words.reduce((accumulator, word) => {
 // **Question:**
 // Use `.reduce()` to calculate the product of all numbers in the `nums` array.
 
+const nums = [2, 3, 4, 5];
+
+let productOfNums = nums.reduce((accumulator, item) => {
+  return accumulator * item;
+});
+
+console.log(productOfNums);
+
 // ---
 
 // ### 4. Find the Longest Word
