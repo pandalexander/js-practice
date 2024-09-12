@@ -31,12 +31,20 @@ let newFruits = fruits.map((item) => {
   return item.length;
 });
 
-console.log(newFruits);
+// console.log(newFruits);
 
 // Convert an array of Celsius temperatures to Fahrenheit:
 
 // javascriptCopyconst celsiusTemps = [0, 10, 20, 30, 40];
 // // Use map to convert Celsius to Fahrenheit (formula: F = C * 9/5 + 32)
+
+const celsiusTemps = [0, 10, 20, 30, 40];
+
+let newTemps = celsiusTemps.map((item) => {
+  return (item * 9) / 5 + 32;
+});
+
+console.log(newTemps);
 
 // Create an array of greeting messages from an array of names:
 
