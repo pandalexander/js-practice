@@ -16,14 +16,22 @@ const numbers = [1, 2, 3, 4, 5];
 // javascriptCopyconst numbers = [1, 2, 3, 4, 5];
 // // Use map to double each number
 
-let newNumbers = numbers.map((item) => (item *= 2));
+// let newNumbers = numbers.map((item) => (item *= 2));
 
-console.log(newNumbers);
+// console.log(newNumbers);
 
 // Create an array of lengths from an array of strings:
 
 // javascriptCopyconst fruits = ['apple', 'banana', 'cherry'];
 // // Use map to create an array of string lengths
+
+const fruits = ["apple", "banana", "cherry"];
+
+let newFruits = fruits.map((item) => {
+  return item.length;
+});
+
+console.log(newFruits);
 
 // Convert an array of Celsius temperatures to Fahrenheit:
 
