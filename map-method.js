@@ -7,14 +7,18 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-let newNumbers = numbers.map((item) => item.toString());
+// let newNumbers = numbers.map((item) => item.toString());
 
-console.log(newNumbers);
+// console.log(newNumbers);
 
 // Double each number in an array:
 
 // javascriptCopyconst numbers = [1, 2, 3, 4, 5];
 // // Use map to double each number
+
+let newNumbers = numbers.map((item) => (item *= 2));
+
+console.log(newNumbers);
 
 // Create an array of lengths from an array of strings:
 
