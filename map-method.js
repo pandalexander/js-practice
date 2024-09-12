@@ -5,6 +5,12 @@
 // javascriptCopyconst numbers = [1, 2, 3, 4, 5];
 // // Use map to convert each number to a string
 
+const numbers = [1, 2, 3, 4, 5];
+
+let newNumbers = numbers.map((item) => item.toString());
+
+console.log(newNumbers);
+
 // Double each number in an array:
 
 // javascriptCopyconst numbers = [1, 2, 3, 4, 5];
