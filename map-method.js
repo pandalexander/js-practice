@@ -44,10 +44,17 @@ let newTemps = celsiusTemps.map((item) => {
   return (item * 9) / 5 + 32;
 });
 
-console.log(newTemps);
+// console.log(newTemps);
 
 // Create an array of greeting messages from an array of names:
 
 // javascriptCopyconst names = ['Alice', 'Bob', 'Charlie'];
 // // Use map to create greeting messages (e.g., "Hello, Alice!")
-// These questions focus on simple transformations using array.map(), which should help you practice and memorize the basic syntax. Would you like me to provide solutions or explanations for any of these questions?
+
+const names = ["Alice", "Bob", "Charlie"];
+
+let newNames = names.map((item) => {
+  return "Hello, " + item + "!";
+});
+
+console.log(newNames);
