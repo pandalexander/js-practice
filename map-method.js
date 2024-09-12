@@ -1,0 +1,27 @@
+// Here are 5 easy practice questions for the JavaScript array.map() function, designed to help you memorize the syntax:
+
+// Convert an array of numbers to an array of strings:
+
+// javascriptCopyconst numbers = [1, 2, 3, 4, 5];
+// // Use map to convert each number to a string
+
+// Double each number in an array:
+
+// javascriptCopyconst numbers = [1, 2, 3, 4, 5];
+// // Use map to double each number
+
+// Create an array of lengths from an array of strings:
+
+// javascriptCopyconst fruits = ['apple', 'banana', 'cherry'];
+// // Use map to create an array of string lengths
+
+// Convert an array of Celsius temperatures to Fahrenheit:
+
+// javascriptCopyconst celsiusTemps = [0, 10, 20, 30, 40];
+// // Use map to convert Celsius to Fahrenheit (formula: F = C * 9/5 + 32)
+
+// Create an array of greeting messages from an array of names:
+
+// javascriptCopyconst names = ['Alice', 'Bob', 'Charlie'];
+// // Use map to create greeting messages (e.g., "Hello, Alice!")
+// These questions focus on simple transformations using array.map(), which should help you practice and memorize the basic syntax. Would you like me to provide solutions or explanations for any of these questions?
