@@ -133,9 +133,28 @@ function filterUnique(arr) {
   return filteredArr;
 }
 
-console.log(filterUnique(uniqueTestArr));
+// console.log(filterUnique(uniqueTestArr));
 
 // 6. Filter strings that start with a vowel
+
+function filterVowel(arr) {
+  let filteredArr = arr.filter((item) => {
+    if (typeof item === "string") {
+      if (
+        item.charAt(0) === "a" ||
+        item.charAt(0) === "e" ||
+        item.charAt(0) === "i" ||
+        item.charAt(0) === "o" ||
+        item.charAt(0) === "u"
+      ) {
+        return item;
+      }
+    }
+  });
+  return filteredArr;
+}
+
+console.log(filterVowel(uniqueTestArr));
 
 // 7. Filter numbers within a range
 
