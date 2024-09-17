@@ -154,9 +154,22 @@ function filterVowel(arr) {
   return filteredArr;
 }
 
-console.log(filterVowel(uniqueTestArr));
+// console.log(filterVowel(uniqueTestArr));
 
 // 7. Filter numbers within a range
+
+let numbersArr = [1, 6, 8, 4, 3, 14, 23, 55, 1, 2, 6, 4, 55];
+
+function filterNumbers(start, end, arr) {
+  let newArr = arr.filter((item) => {
+    if (item >= start && item <= end) {
+      return item;
+    }
+  });
+  return newArr;
+}
+
+console.log(filterNumbers(3, 25, numbersArr));
 
 // 8. Filter objects with all truthy values
 
