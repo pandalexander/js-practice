@@ -169,9 +169,32 @@ function filterNumbers(start, end, arr) {
   return newArr;
 }
 
-console.log(filterNumbers(3, 25, numbersArr));
+// console.log(filterNumbers(3, 25, numbersArr));
 
 // 8. Filter objects with all truthy values
+
+const truthyArr = [
+  0,
+  1,
+  "",
+  "hello",
+  false,
+  true,
+  null,
+  undefined,
+  NaN,
+  42,
+  [],
+  {},
+  [1, 2],
+  { name: "Alice" },
+];
+
+function returnTruthyItems(arr) {
+  return truthyArr.filter((item) => !!item);
+}
+
+console.log(returnTruthyItems(truthyArr));
 
 // 9. Filter elements that appear more than once
 
