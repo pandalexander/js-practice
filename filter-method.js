@@ -208,6 +208,22 @@ function filterRepeats(arr) {
   });
 }
 
-console.log(filterRepeats(numbersArr));
+// console.log(filterRepeats(numbersArr));
 
 // 10. Filter strings containing a specific substring
+
+let stringArr = [
+  "string",
+  "str",
+  "stringy",
+  "string cheese",
+  "cheese",
+  "foo",
+  "bar",
+];
+
+function substringFilter(arr, substring) {
+  return arr.filter((item) => item.includes(substring));
+}
+
+console.log(substringFilter(stringArr, "str"));
