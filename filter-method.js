@@ -158,7 +158,7 @@ function filterVowel(arr) {
 
 // 7. Filter numbers within a range
 
-let numbersArr = [1, 6, 8, 4, 3, 14, 23, 55, 1, 2, 6, 4, 55];
+// let numbersArr = [1, 6, 8, 4, 3, 14, 23, 55, 1, 2, 6, 4, 55];
 
 function filterNumbers(start, end, arr) {
   let newArr = arr.filter((item) => {
@@ -194,8 +194,20 @@ function returnTruthyItems(arr) {
   return truthyArr.filter((item) => !!item);
 }
 
-console.log(returnTruthyItems(truthyArr));
+// console.log(returnTruthyItems(truthyArr));
 
 // 9. Filter elements that appear more than once
+
+let numbersArr = [1, 6, 8, 4, 3, 14, 23, 55, 1, 2, 6, 4, 55];
+
+function filterRepeats(arr) {
+  return arr.filter((item, index) => {
+    if (arr.indexOf(item) !== index) {
+      return item;
+    }
+  });
+}
+
+console.log(filterRepeats(numbersArr));
 
 // 10. Filter strings containing a specific substring
