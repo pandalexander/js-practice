@@ -7,9 +7,12 @@
 
 const numbers = [10, 20, 30, 40];
 
-let reducedNumbers = numbers.reduce((accumulator, item) => {
-  return accumulator + item;
+let sumNumbers = numbers.reduce((accumulator, item) => {
+  accumulator += item;
+  return accumulator;
 });
+
+console.log(sumNumbers);
 
 // console.log(reducedNumbers);
 // ---
@@ -84,4 +87,4 @@ let howManyTimes = items.reduce((accumulator, item) => {
   return accumulator;
 }, 0);
 
-console.log(howManyTimes);
+// console.log(howManyTimes);
