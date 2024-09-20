@@ -57,4 +57,19 @@ let newNames = names.map((item) => {
   return "Hello, " + item + "!";
 });
 
-console.log(newNames);
+// console.log(newNames);
+
+// Use map to capitalize first letter of each word
+
+const phrases = ["hello world", "good morning", "javascript is fun"];
+
+const newPhrases = phrases.map((item) => {
+  return item
+    .split(" ")
+    .map((subItem) => {
+      return subItem[0].toUpperCase() + subItem.slice(1);
+    })
+    .join(" ");
+});
+
+console.log(newPhrases);
