@@ -226,4 +226,12 @@ function substringFilter(arr, substring) {
   return arr.filter((item) => item.includes(substring));
 }
 
-console.log(substringFilter(stringArr, "str"));
+// console.log(substringFilter(stringArr, "str"));
+
+// Filter odd numbers
+
+const oddArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const filteredOddArr = oddArr.filter((item) => item % 2);
+
+console.log(filteredOddArr);
