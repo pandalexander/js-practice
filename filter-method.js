@@ -234,4 +234,12 @@ const oddArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const filteredOddArr = oddArr.filter((item) => item % 2);
 
-console.log(filteredOddArr);
+// console.log(filteredOddArr);
+
+// Filter strings longer than 5 characters
+
+const stringsArr = ["keating", "poetry", "ben", "all", "shakespeare", "ox"];
+
+const longerArr = stringsArr.filter((item) => item.length > 3);
+
+console.log(longerArr);
