@@ -72,4 +72,22 @@ const newPhrases = phrases.map((item) => {
     .join(" ");
 });
 
-console.log(newPhrases);
+// console.log(newPhrases);
+// Problem:
+// You have an array of integers, and you need to return a new array where each element is the square of the original elements but only include those that are even numbers.
+
+// Example:
+// Input: [1, 2, 3, 4, 5]
+// Output: [4, 16]
+
+// Instructions:
+// Use the .map() method to square the numbers.
+// Use the .filter() method to include only even numbers.
+
+const inputNumbers = [1, 2, 3, 4, 5];
+
+const outputNumbers = inputNumbers
+  .map((item) => item * item)
+  .filter((item) => item % 2 === 0);
+
+console.log(outputNumbers);
