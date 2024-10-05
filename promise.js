@@ -19,30 +19,45 @@ function fetchData() {
 // Challenge 3: Promise Rejection
 // Task: Modify the promise from Challenge 1 to reject after 2 seconds with the message "Promise Rejected!". Use .catch() to log the error.
 
-function testErrorCatch() {
-  return new Promise((resolve, reject) => {
-    if (Math.random() < 0.5) {
-      setTimeout(() => {
-        resolve("Promise resolved!");
-      }, 2000);
-    } else {
-      setTimeout(() => {
-        reject("Promise rejected!");
-      }, 2000);
-    }
-  });
-}
+// function testErrorCatch() {
+//   return new Promise((resolve, reject) => {
+//     if (Math.random() < 0.5) {
+//       setTimeout(() => {
+//         resolve("Promise resolved!");
+//       }, 2000);
+//     } else {
+//       setTimeout(() => {
+//         reject("Promise rejected!");
+//       }, 2000);
+//     }
+//   });
+// }
 
-testErrorCatch()
-  .then((data) => {
-    console.log("Success! " + data);
-  })
-  .catch((error) => {
-    console.log("Error! " + error);
-  });
+// testErrorCatch()
+//   .then((data) => {
+//     console.log("Success! " + data);
+//   })
+//   .catch((error) => {
+//     console.log("Error! " + error);
+//   });
 
 // Challenge 4: Chaining Promises
 // Task: Create two promises where the first one resolves after 1 second, and the second one (chained to the first) resolves after 2 seconds with a different message. Log both messages.
+
+function firstPromise() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("First Promise Resolved"), 1000);
+  });
+}
+
+firstPromise()
+  .then((firstData) => {
+    console.log(firstData);
+    return new Promise((resolve) => {
+      setTimeout(() => resolve("Second Promise Resolved"), 2000);
+    });
+  })
+  .then((secondData) => console.log(secondData));
 
 // Challenge 5: Promise All
 // Task: Create three promises that resolve with different messages after 1, 2, and 3 seconds. Use Promise.all() to log all messages when they are all resolved.
