@@ -44,24 +44,43 @@ function fetchData() {
 // Challenge 4: Chaining Promises
 // Task: Create two promises where the first one resolves after 1 second, and the second one (chained to the first) resolves after 2 seconds with a different message. Log both messages.
 
-function firstPromise() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve("First Promise Resolved"), 1000);
-  });
-}
+// function firstPromise() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve("First Promise Resolved"), 1000);
+//   });
+// }
 
-firstPromise()
-  .then((firstData) => {
-    console.log(firstData);
-    return new Promise((resolve) => {
-      setTimeout(() => resolve("Second Promise Resolved"), 2000);
-    });
-  })
-  .then((secondData) => console.log(secondData));
+// firstPromise()
+//   .then((firstData) => {
+//     console.log(firstData);
+//     return new Promise((resolve) => {
+//       setTimeout(() => resolve("Second Promise Resolved"), 2000);
+//     });
+//   })
+//   .then((secondData) => console.log(secondData));
 
 // Challenge 5: Promise All
 // Task: Create three promises that resolve with different messages after 1, 2, and 3 seconds. Use Promise.all() to log all messages when they are all resolved.
 
+const firstPromise = new Promise((resolve) => {
+  setTimeout(() => resolve("First message!"), 1000);
+});
+
+const secondPromise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Second message!");
+  }, 2000);
+});
+
+const thirdPromise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Third message!");
+  }, 3000);
+});
+
+Promise.all([firstPromise, secondPromise, thirdPromise]).then((values) =>
+  console.log(values)
+);
 // Challenge 6: Promise Race
 // Task: Create two promises where one resolves after 1 second and the other after 3 seconds. Use Promise.race() to log the message of the promise that resolves first.
 
